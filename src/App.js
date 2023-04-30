@@ -2,6 +2,9 @@ import React, {useEffect, useState, useContext} from 'react';
 import './App.css';
 import Signup from './Pages/Signup';
 import Login from './Pages/Login';
+import Create from './Pages/Create';
+import View from './Pages/ViewPost';
+import ViewPost from './store/postContext';
 import {AuthContext, FirebaseContext} from './store/Context'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import LoadingAnimation from './Components/Loading/loading';
@@ -26,6 +29,7 @@ function App() {
         <LoadingAnimation />
       ) : (
         <div>
+          <ViewPost>
           <Router>
             <Route exact path='/'>
               <Home />
@@ -36,7 +40,14 @@ function App() {
             <Route path='/login'>
               <Login />
             </Route>
+            <Route path='/create'>
+              <Create />
+            </Route>
+            <Route path='/view'>
+              <View />
+            </Route>
           </Router>
+          </ViewPost>
         </div>
       )}
     </>

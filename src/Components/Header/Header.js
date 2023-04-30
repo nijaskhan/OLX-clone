@@ -1,7 +1,7 @@
 import React,{useContext} from 'react';
 import { AuthContext, FirebaseContext } from '../../store/Context';
 import './Header.css';
-import {useHistory} from 'react-router-dom';
+import {useHistory, Link} from 'react-router-dom';
 import OlxLogo from '../../assets/OlxLogo';
 import Search from '../../assets/Search';
 import Arrow from '../../assets/Arrow';
@@ -17,7 +17,7 @@ function Header() {
     <div className="headerParentDiv">
       <div className="headerChildDiv">
         <div className="brandName">
-          <OlxLogo></OlxLogo>
+          <Link to='/'><OlxLogo></OlxLogo></Link>
         </div>
         <div className="placeSearch">
           <Search></Search>
@@ -53,21 +53,19 @@ function Header() {
           )}
         </div>
         <div className="loginPage">
-          <a style={{cursor: 'pointer',color: 'black'}} href='/login' onClick={()=>{
+          <a style={{cursor: 'pointer',color: 'black'}} onClick={()=>{
             firebase.auth().signOut()
             .then(()=>{
-              console.log("signout successfull");
-              history,push('/login');
+              history.push('/login');
             })
-            .catch((err)=>{
-              console.log(err);
+            .catch(()=>{
               history.push('/login');
             })
           }}>{user&&'Logout'}</a>
           <hr />
         </div>
 
-        <div className="sellMenu">
+        <div className="sellMenu" onClick={()=>history.push('/create')}>
           <SellButton></SellButton>
           <div className="sellMenuContent">
             <SellButtonPlus></SellButtonPlus>

@@ -12,7 +12,6 @@ function Login() {
   const {firebase} = useContext(FirebaseContext);
 
   const handleSubmit=(e)=>{
-    console.log(firebase);
     e.preventDefault();
     firebase.auth().signInWithEmailAndPassword(email, password)
     .then(()=>{

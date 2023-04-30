@@ -89,7 +89,7 @@ export default function Signup() {
           <br />
           <button>Signup</button>
         </form>
-        <a className='mt-3 btn btn-dark' style={{fontWeight: 'bold'}} href='/login'>Login</a>
+        <a className='mt-3 btn btn-dark' style={{fontWeight: 'bold'}} onClick={()=>history.push('/login')}>Login</a>
       </div>
     </div>
   );
