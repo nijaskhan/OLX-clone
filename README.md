@@ -1,4 +1,7 @@
-# Getting Started with Create React App
+# Created an OLX clone utilizing  React.js, Firebase DB, CSS, Bootstrap.
+
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
