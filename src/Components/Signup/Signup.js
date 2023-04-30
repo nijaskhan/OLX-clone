@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import {useHistory} from 'react-router-dom'
 import Logo from '../../olx-logo.png';
-import {FirebaseContext} from '../../store/firebaseContext';
+import {FirebaseContext} from '../../store/Context';
 import './Signup.css';
 
 export default function Signup() {
@@ -66,7 +66,7 @@ export default function Signup() {
           <br />
           <input
             className="input"
-            type="tel"
+            type="number"
             id="mobile"
             value={mobile}
             onChange={(e)=> setMobile(e.target.value)}
@@ -89,7 +89,7 @@ export default function Signup() {
           <br />
           <button>Signup</button>
         </form>
-        <a className='mt-3 btn btn-dark' style={{fontWeight: 'bold'}}>Login</a>
+        <a className='mt-3 btn btn-dark' style={{fontWeight: 'bold'}} href='/login'>Login</a>
       </div>
     </div>
   );
