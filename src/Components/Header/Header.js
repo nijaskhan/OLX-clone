@@ -42,18 +42,18 @@ function Header() {
         <div className="loginPage">
           {user ? (
             <>
-              <a style={{cursor: 'pointer',color: 'black'}} >{user.displayName}</a>
+              <span style={{cursor: 'pointer',color: 'black'}} >{user.displayName}</span>
               <hr />
             </>
           ) : (
             <>
-              <a style={{cursor: 'pointer',color: 'black'}} href='/login'>Login</a>
+              <span style={{cursor: 'pointer',color: 'black'}} href='/login'>Login</span>
               <hr />
             </>
           )}
         </div>
         <div className="loginPage">
-          <a style={{cursor: 'pointer',color: 'black'}} onClick={()=>{
+          <span style={{cursor: 'pointer',color: 'black'}} onClick={()=>{
             firebase.auth().signOut()
             .then(()=>{
               history.push('/login');
@@ -61,7 +61,7 @@ function Header() {
             .catch(()=>{
               history.push('/login');
             })
-          }}>{user&&'Logout'}</a>
+          }}>{user&&'Logout'}</span>
           <hr />
         </div>
 

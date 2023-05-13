@@ -21,6 +21,7 @@ function App() {
     firebase.auth().onAuthStateChanged((user)=>{
       setUser(user);
     });
+    // eslint-disable-next-line
   }, [])
   
   return (

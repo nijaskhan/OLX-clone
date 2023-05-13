@@ -35,7 +35,7 @@ export default function Signup() {
     <div>
       <div className="signupParentDiv" style={{width: '25vw'}}>
         <div className='text-center'>
-          <img width="250px" height="200px" src={Logo}></img>
+          <img width="250px" height="200px" src={Logo} alt='logo'></img>
         </div>
         <form style={{textAlign: 'center', lineHeight: '2rem'}} onSubmit={handleSubmit}>
           <label htmlFor="fname">Username</label>
@@ -89,7 +89,7 @@ export default function Signup() {
           <br />
           <button>Signup</button>
         </form>
-        <a className='mt-3 btn btn-dark' style={{fontWeight: 'bold'}} onClick={()=>history.push('/login')}>Login</a>
+        <p className='mt-3 btn btn-dark w-100' style={{fontWeight: 'bold'}} onClick={()=>history.push('/login')}>Login</p>
       </div>
     </div>
   );

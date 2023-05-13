@@ -26,7 +26,7 @@ function Login() {
     <div>
       <div className="loginParentDiv" style={{width: '20vw'}}>
         <div style={{textAlign: 'center'}}>
-          <img width="200px" height="200px" src={Logo}></img>
+          <img width="200px" height="200px" src={Logo} alt='logo'></img>
         </div>
         <form style={{textAlign: 'center', lineHeight: '2rem'}} onSubmit={handleSubmit}>
           <label htmlFor="email">Email</label>

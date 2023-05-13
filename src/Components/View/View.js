@@ -28,6 +28,7 @@ function View() {
     }else{
       history.push('/login');
     }
+    // eslint-disable-next-line
   }, [])
   return (
     <div className="viewParentDiv">
@@ -37,7 +38,7 @@ function View() {
         <div className="imageShowDiv">
         <img
           src={productDet.imageUrl}
-          alt="Product-Image"
+          alt="Product"
         />
       </div>
         <div className="rightSection">

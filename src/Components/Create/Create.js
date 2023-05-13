@@ -12,6 +12,7 @@ const Create = () => {
   const [category, setCategory] = useState('');
   const [price, setPrice] = useState();
   const [image, setImage] = useState(null);
+  
   const handleSubmit=(e)=>{
     e.preventDefault();
     const date = new Date()
@@ -77,7 +78,7 @@ const Create = () => {
             <br />
           </div>
           <br />
-          <img alt="Product Image" className='py-3' width="110px" height="150px" src={image ? URL.createObjectURL(image) : ''}></img>
+          <img alt="Product" className='py-3' width="110px" height="150px" src={image ? URL.createObjectURL(image) : ''}></img>
             <br />
             <input type="file" onChange={(e)=>setImage(e.target.files[0])} />
             <br /> 

@@ -25,6 +25,7 @@ function Posts() {
     .catch((err)=>{
       console.log(err)
     });
+    // eslint-disable-next-line
   }, [])
   
   return (
@@ -46,7 +47,7 @@ function Posts() {
                     <Heart></Heart>
                   </div>
                   <div className="image">
-                    <img src={post.imageUrl} alt="Product-Image" />
+                    <img src={post.imageUrl} alt="Product" />
                   </div>
                   <div className="content">
                     <p className="rate">&#x20B9; {post.price}</p>
@@ -72,7 +73,7 @@ function Posts() {
               <Heart></Heart>
             </div>
             <div className="image">
-              <img src="../../../Images/R15V3.jpg" alt="" />
+              <img src="../../../Images/R15V3.jpg" alt="ph" />
             </div>
             <div className="content">
               <p className="rate">&#x20B9; 250000</p>
